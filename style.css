@@ -24,6 +24,8 @@ header{
         background-color: rgb(97, 90, 90);
         margin-bottom: -75px ;
         display: flex;
+        box-shadow: 0px 5px 10px gray;
+
 
         .img{
             min-height: 150px;
@@ -40,8 +42,8 @@ header{
             justify-content: space-around;
             height: 100%;
             width: 100%;
-            border-left: 1px solid #b87b19c0 ;
-            background-color: #ee9e1d;
+            border-left: 1px solid #eeecec;
+            background-color: #eeecec;
 
 
 
@@ -50,7 +52,7 @@ header{
                 width: 100%;
                 padding-left: 10px;
                 box-sizing: border-box;
-                border-bottom: 1px solid #7e5512c2 ;
+                border-bottom: 1px solid #b4b4b483 ;
 
             }
             .infoFuncionamento{
@@ -82,10 +84,12 @@ header{
     width: 90%;
     height: 30px;
     background-color: #EE9E1D;
-    margin: 90px auto 10px auto;
+    margin: 100px auto 15px auto;
     position: sticky;
     top:5px;
-
+    box-shadow: 1px 3px 10px gray;
+    display: flex;
+justify-content: center;
     button{
         background-color: #00000000;
         border: none;
@@ -116,16 +120,19 @@ section{
         grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
         gap: 15px;
 
+
         .produto{
-            background-color: rgb(214, 214, 214);
+            background-color: rgb(228, 227, 227);
             height: 200px;
-            border: 1px solid #EE9E1D;
             border-radius: 15px;
             padding: 8px;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            box-shadow: 0px 3px 10px gray;
+            
+
 
             .imagem{
                 height: 70%;
@@ -150,14 +157,60 @@ section{
             }
 
         }
+        .produto:hover{
+            box-shadow: 0px 3px 15px rgb(102, 102, 102);
+           
+        }
 
     }
     .sacola{
         width: 350px;
         height: 500px;
-        background-color: rgb(80, 80, 82);
+        background-color: rgb(235, 235, 235);
         position: sticky;
         top: 40px;
+        border-radius: 15px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+
+        .listProd{
+            width: 100%;
+            height: 370px;
+            background-color: rgb(245, 245, 245);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .total{
+            background-color: gray;
+            gap: 5px;
+            display: grid;
+            margin-top: 10px;
+            padding: 5px;
+            p{
+                margin: 0px;
+            }
+
+            h2{
+                margin: 0px;
+            }
+
+            
+            .checkout{
+
+                button{
+                    display: grid;
+                    justify-self: center;
+                    width: 80%;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: none;
+                }
+                
+
+            }
+        }
 
     }
 }
