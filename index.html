@@ -28,13 +28,19 @@
     <nav class="categorias" id="categorias"></nav>
     <section>
         <div class="produtos" id="produtos"> </div>        
-        <aside class="sacola">
-            <div class="listProd"></div>
+        <aside class="sacola" id="sacola">
+            <div class="listProd" id="listProd">
+                <div class="item">
+                    <p>Item</p>
+                    <p>Quant</p>
+                    <p>Preço</p>
+                </div>
+            </div>
             <div class="total">
                 <p>Valor dos produtos:</p>
                 <p>Taxa de entrega:</p>
                 <div class="checkout">
-                    <h2>Total:</h2>
+                    <h2>Total: <span id="total"></span></h2>
                     <button>Comprar</button>
 
                 </div>
