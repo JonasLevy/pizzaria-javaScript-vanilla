@@ -5,13 +5,13 @@ const ElementCategoria = document.getElementById("categorias")
 const categorias = ["Pizzas", "Sanduiches", "Sobremesa", "Bebidas"]
 const itens = [
     { id: 1, nome: "Calabresa", preco: 25, categoria: "Pizzas", img: "pizza-calabresa" },
-    { id: 2, nome: "4 Queijos", preco: 25, categoria: "Pizzas", img: "4queijos" },
-    { id: 3, nome: "Bacon", preco: 25, categoria: "Pizzas", img: "bacon" },
-    { id: 4, nome: "Mista", preco: 25, categoria: "Pizzas", img: "pizza-mista" },
-    { id: 5, nome: "Baurú", preco: 25, categoria: "Sanduiches", img: "bauru" },
-    { id: 6, nome: "Mistão", preco: 25, categoria: "Sanduiches", img: "mistao" },
-    { id: 7, nome: "Pudim", preco: 25, categoria: "Sobremesa", img: "pudim" },
-    { id: 8, nome: "Coca-Cola", preco: 25, categoria: "Bebidas", img: "coca" }
+    { id: 2, nome: "4 Queijos", preco: 28, categoria: "Pizzas", img: "4queijos" },
+    { id: 3, nome: "Bacon", preco: 27, categoria: "Pizzas", img: "bacon" },
+    { id: 4, nome: "Mista", preco: 22, categoria: "Pizzas", img: "pizza-mista" },
+    { id: 5, nome: "Baurú", preco: 20, categoria: "Sanduiches", img: "bauru" },
+    { id: 6, nome: "Mistão", preco: 22, categoria: "Sanduiches", img: "mistao" },
+    { id: 7, nome: "Pudim", preco: 5, categoria: "Sobremesa", img: "pudim" },
+    { id: 8, nome: "Coca-Cola", preco: 5, categoria: "Bebidas", img: "coca" }
 ]
 
 function renderizaItens() {
