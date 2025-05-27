@@ -248,6 +248,9 @@ section {
                     margin: 0;
                 }
 
+                .quantItens {
+                    display: flex;
+                }
             }
 
         }
