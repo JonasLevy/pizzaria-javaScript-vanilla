@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-    <link rel="stylesheet" href="style.css">
+<html lang="pt-br">
+    <link rel="stylesheet" href="./css/style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Marinara Pizza</title>
 </head>
 <body>
     <header>
         <div class="containerImagInfo">
             <div class="img">
-                <img src="imagens/930437e4-11b0-42a8-9474-31ec620146ca.jpg" alt="">
+                <img src="./imagens/930437e4-11b0-42a8-9474-31ec620146ca.jpg" alt="">
             </div>
             <div class="info">
                 <div class="nomeEmpresa">
-                    <h1>Marinara</h1>
+                    <h1>Marinara Pizza</h1>
                 </div>
                 <div class="infoFuncionamento">
                     <button>Taxa de entrega</button>
@@ -34,14 +34,15 @@
                 <p>Item</p>
                 <p>Quant</p>
                 <p>Preço</p>
-            </div>
+                <p>Total</p>
+            </div>  
             </div>
             <div class="total">
-                <p>Valor dos produtos:</p>
-                <p>Taxa de entrega:</p>
+                <p >Valor dos produtos: <span id="vTotalProds">0,00</span></p>
+                <p id="txEntrega">Taxa de entrega:<span> 0,00</span></p>
                 <div class="checkout">
-                    <h2>Total: <span id="total"></span></h2>
-                    <button>Comprar</button>
+                    <h3>Total: <span id="total">0,00</span></h3>
+                    <button>Confirmar o pedido</button>
 
                 </div>
 
