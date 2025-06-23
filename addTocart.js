@@ -7,10 +7,11 @@ const totalUnit = document.getElementById("vTotalProds")
 
 function somaTotal() {
     const somaTotal = itensSacola.reduce((acumulador, item) => {
-        return acumulador + item.valorUnit
+        return acumulador + (item.preco*item.quant)
     }, 0)
     total.textContent = Number(somaTotal).toFixed(2)
     totalUnit.textContent = Number(somaTotal).toFixed(2)
+
 }
 
 export function adicionaQuant(indexItem) {

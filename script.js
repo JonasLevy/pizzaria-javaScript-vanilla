@@ -95,3 +95,13 @@ function renderizaCategorias() {
 
     });
 }
+
+const modal= document.querySelector(".modal")
+function onModal(){
+    modal.style.display="flex"
+}
+
+function closeModal(){
+    modal.style.display="none"
+    alert("df")
+}

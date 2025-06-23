@@ -296,7 +296,28 @@ section {
       }
     }
   }
+
+  
 }
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(102, 104, 102, 0.322);
+    z-index: 999;
+    display: none;
+    .cep{
+      width: 400px;
+      padding: 60px;
+      background-color: #eeecec;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
 
 footer {
   min-height: 150px;
