@@ -6,7 +6,8 @@
 
 body {
   background-color: rgb(235, 235, 235);
-  max-width: 100%;
+  width: 100dvw;
+  box-sizing: border-box;
 }
 
 header {
@@ -21,8 +22,14 @@ header {
   background-position: center;
   box-shadow: 0px 3px 10px gray;
 }
+@media (max-width: 768px) {
+  header {
+    width: 100dvw;
+    box-sizing: border-box;
+  }
+}
 header .containerImagInfo {
-  width: 80%;
+  width: 90%;
   height: 150px;
   background-color: rgb(97, 90, 90);
   margin-bottom: -75px;
@@ -46,6 +53,11 @@ header .containerImagInfo .info {
   width: 100%;
   border-left: 1px solid #eeecec;
   background-color: #eeecec;
+}
+@media (max-width: 768px) {
+  header .containerImagInfo .info {
+    overflow: hidden;
+  }
 }
 header .containerImagInfo .info .nomeEmpresa {
   height: 50%;
@@ -96,13 +108,19 @@ header .containerImagInfo .info .infoFuncionamento button:hover {
 section {
   min-height: 380px;
   display: flex;
-  width: 100%;
+  width: 100dvw;
   justify-content: center;
   padding: 10px;
   gap: 15px;
 }
 section .produtos {
   width: calc(100% - 390px);
+}
+@media (max-width: 768px) {
+  section .produtos {
+    width: 100%;
+    background-color: gray;
+  }
 }
 section .produtos h2 {
   width: 98%;
@@ -114,9 +132,21 @@ section .produtos h2 {
 section .produtos .itensProdutos {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 48%));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 47%));
   gap: 15px;
   margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  section .produtos .itensProdutos {
+    width: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 80%));
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  section .produtos .itensProdutos {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 100%));
+  }
 }
 section .produtos .itensProdutos .produto {
   background-color: rgb(245, 245, 245);
@@ -179,6 +209,17 @@ section .sacola {
   flex-direction: column;
   box-shadow: 0px 3px 10px gray;
   text-align: center;
+}
+@media (max-width: 768px) {
+  section .sacola {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 5px;
+    height: 95%;
+    width: 80%;
+    display: none;
+  }
 }
 section .sacola h3 {
   margin: 0;
@@ -264,6 +305,19 @@ section .sacola .total .checkout button {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.btnCart {
+  display: none;
+}
+@media (max-width: 768px) {
+  .btnCart {
+    display: block;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+  }
 }
 
 footer {

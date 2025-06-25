@@ -96,12 +96,43 @@ function renderizaCategorias() {
     });
 }
 
-const modal= document.querySelector(".modal")
-function onModal(){
-    modal.style.display="flex"
+const modal = document.getElementById("modal");
+const btnModal = document.getElementById("btnModal");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const btnCart = document.getElementById("btnCart")
+const sacola = document.getElementById("sacola")
+
+export function onModal() {
+    if (modal) {
+        modal.style.display = "flex";
+    }
 }
 
-function closeModal(){
-    modal.style.display="none"
-    alert("df")
+export function offModal() {
+    if (modal) {
+        modal.style.display = "none";
+    }
 }
+
+function onCart() {
+    if (sacola.style.display == "flex") {
+        sacola.style.display = 'none'
+    } else {
+        sacola.style.display = 'flex'
+    }
+}
+
+
+// Adiciona os event listeners quando o DOM estiver completamente carregado
+document.addEventListener('DOMContentLoaded', () => {
+    if (btnModal) {
+        btnModal.addEventListener('click', onModal);
+    }
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', offModal);
+    }
+    if (btnCart) {
+        btnCart.addEventListener('click', onCart)
+
+    }
+});
