@@ -1,4 +1,4 @@
-import { adicionaQuant, removeQuant } from "./addTocart.js";
+import { increaseItemQuantity, removeToCart } from "./functionsCart.js";
 const divListaProduto = document.getElementById("listProd")
 
 export function renderizaItens(itensSacola) {
@@ -32,11 +32,11 @@ export function renderizaItens(itensSacola) {
         quantItem.textContent = `${item.quant}`
         const btnRemove = document.createElement("button")
         btnRemove.textContent = "-"
-        btnRemove.onclick = () => removeQuant(i)
+        btnRemove.onclick = () => removeToCart(i)
         btnRemove.classList.add("remove")
         const btnAdiciona = document.createElement("button")
         btnAdiciona.textContent = "+"
-        btnAdiciona.onclick = () => adicionaQuant(i)
+        btnAdiciona.onclick = () => increaseItemQuantity(i)
 
         //adiciona os botoes e quantidade na div quantItem
         divQuant.appendChild(btnRemove)

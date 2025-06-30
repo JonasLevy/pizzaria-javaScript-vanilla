@@ -1,4 +1,4 @@
-import { addSacola } from "./addTocart.js"
+import { addToCart } from "./functionsCart.js"
 
 let divProduto = document.getElementById("produtos")
 const ElementCategoria = document.getElementById("categorias")
@@ -68,7 +68,7 @@ function renderizaItens() {
                 // Botão
                 const botao = document.createElement("button")
                 botao.textContent = "adicionar"
-                botao.onclick = () => addSacola(item)
+                botao.onclick = () => addToCart(item)
 
                 // Monta produtoDiv
                 produtoDiv.appendChild(descriImagem)

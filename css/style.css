@@ -268,17 +268,17 @@ section .sacola .listProd .item button {
 section .sacola .listProd .item .remove {
   background-color: rgb(224, 86, 86);
 }
-section .sacola .total {
+section .sacola .totalAmount {
   gap: 5px;
   display: grid;
   margin-top: 10px;
   padding: 5px;
 }
-section .sacola .total p {
+section .sacola .totalAmount p {
   margin: 0;
   justify-self: start;
 }
-section .sacola .total .checkout button {
+section .sacola .totalAmount .checkout button {
   display: grid;
   justify-self: center;
   width: 80%;

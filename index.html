@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/style.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marinara Pizza</title>
 </head>
+
 <body>
     <header>
         <div class="containerImagInfo">
@@ -17,7 +19,7 @@
                     <h1>Marinara Pizza</h1>
                 </div>
                 <div class="infoFuncionamento">
-                    <button id="btnModal" >Taxa de entrega</button>
+                    <button id="btnModal">Taxa de entrega</button>
                     <button>Horário de funcionamento</button>
                     <button>Taxa de entrega</button>
                     <button>Contato</button>
@@ -27,21 +29,21 @@
     </header>
     <nav class="categorias" id="categorias"></nav>
     <section>
-        <div class="produtos" id="produtos"> </div>        
+        <div class="produtos" id="produtos"> </div>
         <aside class="sacola" id="sacola">
             <div class="listProd" id="listProd">
-            <div class="item">
-                <p>Item</p>
-                <p>Quant</p>
-                <p>Preço</p>
-                <p>Total</p>
-            </div>  
+                <div class="item">
+                    <p>Item</p>
+                    <p>Quant</p>
+                    <p>Preço</p>
+                    <p>Total</p>
+                </div>
             </div>
-            <div class="total">
-                <p >Valor dos produtos: <span id="vTotalProds">0,00</span></p>
+            <div class="totalAmount">
+                <p>Valor dos produtos: <span id="cartSubTotal">0,00</span></p>
                 <p id="txEntrega">Taxa de entrega:<span> 0,00</span></p>
                 <div class="checkout">
-                    <h3>Total: <span id="total">0,00</span></h3>
+                    <h3>Total: <span id="totalAmount">0,00</span></h3>
                     <button>Confirmar o pedido</button>
 
                 </div>
@@ -56,13 +58,14 @@
         <div class="cep">
             <span>
                 <input type="number" placeholder="digite seu cep">
-                <button>pesquisar   </button>
+                <button>pesquisar </button>
             </span>
             <input type="text" placeholder="rua">
-            <button id="closeModalBtn">fechar</button>
+            <button id="btnCart">fechar</button>
         </div>
     </div>
     <button id="btnCart" class="btnCart">Cart</button>
 </body>
 <script type="module" src="script.js" defer></script>
+
 </html>
