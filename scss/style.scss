@@ -145,7 +145,7 @@ section {
     width: calc(100% - 390px);
 
     @media (max-width: $tablet) {
-      width: 100dvw;      
+      width: 100dvw;
     }
 
     h2 {
@@ -270,6 +270,11 @@ section {
       margin: 0 auto;
       padding: 5px;
       overflow: hidden;
+
+      @media (max-width: $tablet) {
+        height: 70%;
+        width: 91%;
+      }
 
       .item {
         width: 100%;

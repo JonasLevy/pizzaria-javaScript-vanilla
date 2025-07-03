@@ -1,0 +1,370 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(235, 235, 235);
+  width: 100dvw;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  background-color: rgb(148, 148, 148);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-image: url("../src/assets/imagens/5193138.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 3px 10px gray;
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 100dvw;
+    box-sizing: border-box;
+  }
+}
+header .containerImagInfo {
+  width: 90%;
+  height: 150px;
+  background-color: rgb(97, 90, 90);
+  margin-bottom: -75px;
+  display: flex;
+  box-shadow: 0px 5px 10px gray;
+}
+
+header .containerImagInfo .img {
+  min-height: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  background-color: rgb(75, 74, 74);
+}
+
+header .containerImagInfo .img img {
+  max-width: 100%;
+}
+
+header .containerImagInfo .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  border-left: 1px solid #eeecec;
+  background-color: #eeecec;
+}
+
+@media (max-width: 768px) {
+  header .containerImagInfo .info {
+    overflow: hidden;
+  }
+}
+header .containerImagInfo .info .nomeEmpresa {
+  height: 50%;
+  width: 100%;
+  padding-left: 10px;
+  border-bottom: 1px solid rgba(180, 180, 180, 0.5137254902);
+  display: flex;
+  align-items: center;
+}
+
+header .containerImagInfo .info .infoFuncionamento {
+  height: 50%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+}
+
+header .containerImagInfo .info .infoFuncionamento button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+header .containerImagInfo .info .infoFuncionamento button:hover {
+  background-color: rgba(97, 96, 96, 0.1215686275);
+}
+
+.categorias {
+  width: 90%;
+  height: 30px;
+  background-color: #EE9E1D;
+  margin: 100px auto 15px;
+  position: sticky;
+  top: 5px;
+  box-shadow: 1px 3px 10px gray;
+  display: flex;
+  justify-content: center;
+}
+
+.categorias button {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.categorias button:hover {
+  background-color: rgba(97, 96, 96, 0.1215686275);
+}
+
+section {
+  min-height: 380px;
+  display: flex;
+  width: 100dvw;
+  justify-content: center;
+  padding: 10px;
+  gap: 15px;
+}
+
+section .produtos {
+  width: calc(100% - 390px);
+}
+
+@media (max-width: 768px) {
+  section .produtos {
+    width: 100dvw;
+  }
+}
+section .produtos h2 {
+  width: 98%;
+  box-shadow: 0px 3px 10px gray;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+section .produtos .itensProdutos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 47%));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  section .produtos .itensProdutos {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 80%));
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  section .produtos .itensProdutos {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 80%));
+  }
+}
+section .produtos .itensProdutos .produto {
+  background-color: rgb(245, 245, 245);
+  height: 180px;
+  border-radius: 15px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 3px 10px gray;
+  width: 100%;
+  transition: box-shadow 0.2s;
+}
+
+section .produtos .itensProdutos .produto:hover {
+  box-shadow: 0px 3px 15px rgb(102, 102, 102);
+}
+
+section .produtos .itensProdutos .produto .descriImagem {
+  display: flex;
+  height: 70%;
+}
+
+section .produtos .itensProdutos .produto .descriImagem .tituloDescri {
+  width: 50%;
+}
+
+section .produtos .itensProdutos .produto .descriImagem .tituloDescri h3 {
+  margin: 0;
+}
+
+section .produtos .itensProdutos .produto .descriImagem .imagem {
+  width: 50%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+section .produtos .itensProdutos .produto .descriImagem .imagem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+section .produtos .itensProdutos .produto p {
+  margin: 5px 0;
+}
+
+section .produtos .itensProdutos .produto button {
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(75, 170, 75);
+  color: white;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+section .sacola {
+  width: 350px;
+  height: 500px;
+  background-color: rgb(228, 227, 227);
+  position: sticky;
+  top: 40px;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 3px 10px gray;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  section .sacola {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 5px;
+    height: 95%;
+    width: 90%;
+    display: none;
+  }
+}
+section .sacola h3 {
+  margin: 0;
+}
+
+section .sacola .listProd {
+  width: 100%;
+  height: 370px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 5px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  section .sacola .listProd {
+    height: 70%;
+    width: 91%;
+  }
+}
+section .sacola .listProd .item {
+  width: 100%;
+  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px dashed gray;
+  margin-top: 5px;
+}
+
+section .sacola .listProd .item p {
+  margin: 0 4px;
+}
+
+section .sacola .listProd .item .quantItens {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+section .sacola .listProd .item .quantItens p {
+  border: 1px solid gray;
+  border-radius: 3px;
+  height: 20px;
+  padding: 0 3px;
+}
+
+section .sacola .listProd .item button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(75, 170, 75);
+  color: white;
+  font-size: large;
+  cursor: pointer;
+}
+
+section .sacola .listProd .item .remove {
+  background-color: rgb(224, 86, 86);
+}
+
+section .sacola .totalAmount {
+  gap: 5px;
+  display: grid;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+section .sacola .totalAmount p {
+  margin: 0;
+  justify-self: start;
+}
+
+section .sacola .totalAmount .checkout button {
+  display: grid;
+  justify-self: center;
+  width: 80%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(75, 170, 75);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(102, 104, 102, 0.322);
+  z-index: 999;
+  display: none;
+}
+
+.modal .cep {
+  width: 400px;
+  padding: 60px;
+  background-color: #eeecec;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btnCart {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .btnCart {
+    display: block;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+  }
+}
+footer {
+  min-height: 150px;
+  background-color: rgb(92, 91, 91);
+  width: 100%;
+} 
+
+/*# sourceMappingURL=style.css.map */

@@ -4,7 +4,7 @@
   "main": "addTocart.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "sass": "sass --watch scss:css"
+     "sass": "sass --watch scss:src/css"
   },
   "repository": {
     "type": "git",
