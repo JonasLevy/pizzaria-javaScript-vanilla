@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: end;
-  background-image: url("../imagens/5193138.jpg");
+  background-image: url("../src/assets/imagens/5193138.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: 0px 3px 10px gray;
@@ -118,8 +118,7 @@ section .produtos {
 }
 @media (max-width: 768px) {
   section .produtos {
-    width: 100%;
-    background-color: gray;
+    width: 100dvw;
   }
 }
 section .produtos h2 {
@@ -138,14 +137,14 @@ section .produtos .itensProdutos {
 }
 @media (max-width: 768px) {
   section .produtos .itensProdutos {
-    width: 80%;
+    width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(350px, 80%));
     justify-content: center;
   }
 }
 @media (max-width: 480px) {
   section .produtos .itensProdutos {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 100%));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 80%));
   }
 }
 section .produtos .itensProdutos .produto {

@@ -1,4 +1,6 @@
 import { addToCart } from "./functionsCart.js"
+import { offModal, onModal } from "./modalDeliveryFee.js"
+import {onCart} from "./modalCartItems.js"
 
 let divProduto = document.getElementById("produtos")
 const ElementCategoria = document.getElementById("categorias")
@@ -56,7 +58,7 @@ function renderizaItens() {
                 imagemDiv.classList.add("imagem")
 
                 const img = document.createElement("img")
-                img.src = `imagens/${item.img}.jpg`
+                img.src = `assets/imagens/${item.img}.jpg`
                 img.alt = `${item.nome} - ${item.preco}`
 
                 imagemDiv.appendChild(img)
@@ -96,34 +98,9 @@ function renderizaCategorias() {
     });
 }
 
-const modal = document.getElementById("modal");
 const btnModal = document.getElementById("btnModal");
 const closeModalBtn = document.getElementById("closeModalBtn");
-const btnCart = document.getElementById("btnCart")
-const sacola = document.getElementById("sacola")
 
-export function onModal() {
-    if (modal) {
-        modal.style.display = "flex";
-    }
-}
-
-export function offModal() {
-    if (modal) {
-        modal.style.display = "none";
-    }
-}
-
-function onCart() {
-    if (sacola.style.display == "flex") {
-        sacola.style.display = 'none'
-    } else {
-        sacola.style.display = 'flex'
-    }
-}
-
-
-// Adiciona os event listeners quando o DOM estiver completamente carregado
 document.addEventListener('DOMContentLoaded', () => {
     if (btnModal) {
         btnModal.addEventListener('click', onModal);
@@ -131,6 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeModalBtn) {
         closeModalBtn.addEventListener('click', offModal);
     }
+});
+
+
+const btnCart = document.getElementById("btnCart")
+document.addEventListener('DOMContentLoaded', () => {
     if (btnCart) {
         btnCart.addEventListener('click', onCart)
 
