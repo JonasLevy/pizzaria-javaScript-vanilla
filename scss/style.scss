@@ -18,11 +18,11 @@ $tablet: 768px;
 }
 
 body {
-
+  font-family: 'Roboto', sans-serif;
   background-color: $cor-fundo-body;
   width: 100dvw;
+  min-height: 100dvh;
   box-sizing: border-box;
-  // overflow-x: hidden;
 }
 
 header {
@@ -40,12 +40,11 @@ header {
   @media (max-width: $tablet) {
     width: 100dvw;
     box-sizing: border-box;
-    height: 250px;
-
+    height: 230px;
   }
 
   .containerImagInfo {
-    width: 90%;
+    width: calc(100% - 40px);
     height: 150px;
     margin-bottom: -75px;
     display: flex;
@@ -55,9 +54,9 @@ header {
       width: 100%;
       box-sizing: border-box;
       height: auto;
-      margin-bottom: -100px;
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
 
 
@@ -65,12 +64,15 @@ header {
       min-width: 150px;
       max-width: 150px;
       margin-bottom: -50px;
-      z-index: 999;
+      z-index: 1;
 
       @media (max-width: $tablet) {
         display: flex;
         align-items: end;
+        margin-bottom: -75px;
         margin-left: 15px;
+        border-radius: 50%;
+        overflow: hidden;
       }
 
       img {
@@ -98,11 +100,14 @@ header {
         align-items: center;
 
         @media (max-width:$tablet) {
-          height: 50px;
+          height: 140px;
+          margin-top: -15px;
+          align-items: end;
+          padding-bottom: 5px;
 
           h1 {
             width: 100%;
-            margin-left: 165px;
+            text-align: center;
           }
         }
       }
@@ -112,10 +117,11 @@ header {
         width: 100%;
         padding: 10px;
         display: flex;
+        justify-content: space-around;
 
         @media (max-width: $tablet) {
-          height: 50px;
-          padding: 0px;
+          height: 60px;
+          padding: 5px;
         }
 
         button {
@@ -126,6 +132,11 @@ header {
 
           @media (max-width: $tablet) {
             padding: 0px 20px;
+
+            img {
+              height: 40px;
+              width: 40px;
+            }
 
           }
 
@@ -138,23 +149,33 @@ header {
   }
 }
 
+.categorias::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 .categorias {
-  width: 100%;
-  height: 30px;
+  width: 90%;
+  height: 40px;
   background-color: #EE9E1D;
   margin: 100px auto 15px;
   position: sticky;
-  top: 5px;
+  top: 0px;
   box-shadow: 1px 3px 10px gray;
   display: flex;
   justify-content: center;
 
   @media (max-width: $tablet) {
+    width: 100%;
     height: 50px;
     padding: 0px;
+    justify-content: start;
+    gap: 25px;
+    overflow-y: scroll;
+
 
   }
-
 
   button {
     background-color: transparent;
@@ -162,6 +183,12 @@ header {
     height: 100%;
     padding: 0 20px;
     cursor: pointer;
+
+    @media (max-width: $tablet) {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
 
     &:hover {
       background-color: $cor-btn-hover;
@@ -172,7 +199,7 @@ header {
 section {
   min-height: 380px;
   display: flex;
-  width: 100dvw;
+  width: 100%;
   justify-content: center;
   padding: 10px;
   gap: 15px;
@@ -189,9 +216,16 @@ section {
     h2 {
       width: 98%;
       box-shadow: 0px 3px 10px gray;
+      background-color: #eeecec;
       margin: 0 0 10px 0;
       padding: 5px;
       border-radius: 5px;
+      position: sticky;
+      top: 40px;
+
+      @media (max-width: $tablet) {
+        width: 100dvw;
+      }
     }
 
     .itensProdutos {
@@ -209,13 +243,13 @@ section {
       }
 
       @media (max-width:$mobile) {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 80%));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 85%));
 
       }
 
       .produto {
         background-color: $cor-card;
-        height: 180px;
+        height: 235px;
         border-radius: 15px;
         padding: 8px;
         display: flex;
@@ -237,7 +271,13 @@ section {
             width: 50%;
 
             h3 {
+              font-size: 1.5rem;
               margin: 0;
+            }
+
+            .preco {
+              font-size: 1.5rem;
+              font-weight: bold;
             }
           }
 
@@ -268,6 +308,13 @@ section {
           color: white;
           font-weight: 100;
           cursor: pointer;
+
+          @media (max-width:$tablet) {
+            padding: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+
         }
       }
     }
@@ -285,15 +332,15 @@ section {
     flex-direction: column;
     box-shadow: 0px 3px 10px gray;
     text-align: center;
+    z-index: 9;
 
     @media (max-width: $tablet) {
-      display: none;
       position: fixed;
-      top: 10px;
-      right: 5px;
-      height: 95%;
-      width: 80%;
-      display: none;
+      height: 0%;
+      width: 100%;
+      top: unset;
+      bottom: 0;
+      transition: height 0.5s ease-in;
     }
 
     h3 {
@@ -400,15 +447,40 @@ section {
   }
 }
 
-.btnCart {
+
+
+.infoBag {
   display: none;
 
   @media (max-width:$tablet) {
     display: block;
     position: fixed;
-    right: 10px;
-    bottom: 10px;
-    padding: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: #EE9E1D;
+    bottom: 20px;
+    z-index: 1000;
+
+    button {
+      height: 100%;
+      background-color: unset;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+
+      img {
+        height: 70%;
+      }
+
+    }
+
   }
 }
 

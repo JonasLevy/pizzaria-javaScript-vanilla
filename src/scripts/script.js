@@ -1,6 +1,7 @@
 import { addToCart } from "./functionsCart.js"
 import { offModal, onModal } from "./modalDeliveryFee.js"
 import {onCart} from "./modalCartItems.js"
+import { currencyFormatter } from "./currencyFormatter.js"
 
 let divProduto = document.getElementById("produtos")
 const ElementCategoria = document.getElementById("categorias")
@@ -22,6 +23,7 @@ function renderizaItens() {
         // Cria o título da categoria
         const titulo = document.createElement("h2")
         titulo.textContent = element
+        titulo.id = element
 
         // Cria a div que vai conter os produtos dessa categoria
         const divItensProdutos = document.createElement("div")
@@ -50,8 +52,13 @@ function renderizaItens() {
                 p.classList.add("decricao")
                 p.textContent = "Nossas pizzas são preparadas com ingredientes frescos, massa artesanal e muito recheio."
 
+                const preco = document.createElement("p")
+                preco.classList.add("preco")
+                preco.textContent = currencyFormatter(item.preco) 
+
                 tituloDescri.appendChild(h3)
                 tituloDescri.appendChild(p)
+                tituloDescri.appendChild(preco)
 
                 // Imagem
                 const imagemDiv = document.createElement("div")
@@ -69,7 +76,7 @@ function renderizaItens() {
 
                 // Botão
                 const botao = document.createElement("button")
-                botao.textContent = "adicionar"
+                botao.textContent = "Adicionar"
                 botao.onclick = () => addToCart(item)
 
                 // Monta produtoDiv
@@ -92,8 +99,11 @@ renderizaItens()
 function renderizaCategorias() {
     categorias.forEach(element => {
         const btn = document.createElement("button")
+        const link = document.createElement("a")
+        link.href = `#${element}`
         btn.textContent = element
-        ElementCategoria.appendChild(btn)
+        link.appendChild(btn)
+        ElementCategoria.appendChild(link)
 
     });
 }

@@ -3,16 +3,21 @@ import {currencyFormatter} from "./currencyFormatter.js"
 export const cartItems = []
 const totalAmount = document.getElementById("totalAmount")
 const  cartSubTotal = document.getElementById("cartSubTotal")
+const  infoBag = document.getElementById("txtInfoBag")
+let valorTotal = 0
 
 
 
 export function totalSum() {
-    const cartSubtotal = cartItems.reduce((accumulator, {preco, quant}) => {
+    const subtotal = cartItems.reduce((accumulator, {preco, quant}) => {
         return accumulator + (preco*quant)
     }, 0)
-    totalAmount.textContent = currencyFormatter(cartSubtotal)
-    cartSubTotal.textContent = currencyFormatter(cartSubtotal)
-
+    const quantItens = cartItems.length
+    totalAmount.textContent = currencyFormatter(subtotal)
+    cartSubTotal.textContent = currencyFormatter(subtotal)
+    if(subtotal>0){
+        infoBag.textContent = `${quantItens} item na sacola - ${currencyFormatter(subtotal)}`
+    }
 }
 
 export function increaseItemQuantity(indexItem) {
