@@ -1,6 +1,4 @@
-Olá, seja bem vindo!
-Instalar as dependencias - npm i
-em seguida - npm run sass - para rodar o sass
+
 # Marinara Pizza 🍕
 
 > Aplicação de delivery simples construída com **HTML**, **Sass (SCSS)** e **JavaScript (modular, sem framework)**.
