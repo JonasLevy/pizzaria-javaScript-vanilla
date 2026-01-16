@@ -21,9 +21,10 @@ function renderizaItens() {
 
     categorias.forEach(element => {
         // Cria o título da categoria
-        const titulo = document.createElement("h2")
+        const titulo = document.createElement("p");
         titulo.textContent = element
         titulo.id = element
+        titulo.classList.add("tituloCategoria");
 
         // Cria a div que vai conter os produtos dessa categoria
         const divItensProdutos = document.createElement("div")
